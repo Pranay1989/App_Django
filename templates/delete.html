@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link hrefE:\blongo\blongo\application\myapp\static\myapp.css" rel="stylesheet" type="text/css">  
+  </head> 
+  <body>
+    <h1>Delete Details</h1>
+    <form method="post" action="http://127.0.0.1:8000/delete/">
+      {% csrf_token %}
+      <input type="text" name="id" value="{{post._id}}">
+      <p>Are you sure you want to delete this post?</p>
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>
